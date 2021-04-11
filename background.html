@@ -1,0 +1,24 @@
+<!-- If mouse button is pressed, background color should 
+be blue. If mouse button is released up, background color should be green.  -->
+
+<html>
+
+<body>
+    <input type="button" value="change color" name="btn" id="btn">
+
+    <script type="text/javascript">
+        window.onload = function () //	It occurs when an object is completely loaded.
+        {
+            document.getElementById("btn").onmousedown = function () {
+                document.body.style.backgroundColor = "blue";
+            }
+
+            document.getElementById("btn").onmouseup = function () {
+                document.body.style.backgroundColor = "green";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

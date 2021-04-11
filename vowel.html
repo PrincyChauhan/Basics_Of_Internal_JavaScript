@@ -1,0 +1,61 @@
+<!-- Write a JavaScript that handles following events.
+(i) Gives the key code for the key pressed. 
+(ii) The script should give message that "vowel is pressed" if vowel 
+keys are pressed. 
+(iii) Background color should change to red after releasing the pressed 
+key. -->
+
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // ii vowel is pressed
+      function isVowel() {
+        var result = document.getElementById("che").value;
+        reg = /^[AEIOUaeiou]/;
+        if (result.length == 1) {
+          if (result.match(reg)) {
+            alert(result + " " + "isVowel");
+          } else {
+            alert(result + " " + "is not Vowel");
+          }
+        } else {
+          alert("Plz enter only one character");
+        }
+      }
+
+      //   key code for the key pressed
+      function uniKeyCode(event) {
+        var key = event.keyCode;
+        document.getElementById("p").innerHTML =
+          "The Unicode KEY code is: " + key;
+      }
+
+      // after relese color change red
+      function keydownFunction() {
+        document.getElementById("demo").style.backgroundColor = "green";
+      }
+
+      function keyupFunction() {
+        document.getElementById("demo").style.backgroundColor = "red";
+      }
+
+      function date() {
+        var a = new Date();
+        document.getElementById("date").innerHTML = a;
+      }
+    </script>
+
+    Enter character:<input type="text" id="che" name="character" placeholder="Check a vowel or not" /><br />
+
+    Enter character:<input type="text" id="key" name="character" placeholder="key code" onkeypress="uniKeyCode(event)" /><br />
+
+    <input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()" /><br />
+    <input type="button" value="Vowel" onclick="isVowel()" />
+    <input type="button" value="Date" onclick="date()" />
+    <p id="p"></p>
+    <p id="date"></p>
+  </body>
+</html>

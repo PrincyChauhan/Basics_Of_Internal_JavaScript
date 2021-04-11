@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Email-validation</title>
+</head>
+<body>
+   
+    <input type="text" id="email" name="email" placeholder="Enter your email" required><br>
+    <input type="button" id="btn" name="btn" value="Submit" onclick="user()">
+
+    <script type="text/javascript">
+        function user() {
+
+            reg = /^[A-Za-z0-9._]+@[a-zA-z]+\.([A-Za-z])/;
+            var email = document.getElementById('email').value;
+            
+            if(email.match(reg)){
+                alert('Sucessfully')
+            }
+            else{
+                alert('Please enter vaild inputs')
+            }
+        }
+    
+    </script>
+</body>
+</html>

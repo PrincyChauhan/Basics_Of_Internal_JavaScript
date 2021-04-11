@@ -1,0 +1,36 @@
+<!-- Design a login form with username and password option using HTML 
+and JavaScript. Perform following validations.
+(i) Username field: minimum length 6 characters, it should not 
+have any special character or digits other than _ 
+(ii) Password field: minimum length 8 characters and maximum 
+length 12 characters, it must contain at least one digit and at 
+least one special character from the set {*,#,_} -->
+
+<html>
+<head>
+    <title>validation</title>
+</head>
+<body>
+   
+    <input type="text" id="username" name="username" placeholder="Enter username" required><br>
+    <input type="password" id="password" name="password" placeholder="Enter password" required><br>
+    <input type="button" id="btn" name="btn" value="Submit" onclick="user()">
+
+    <script type="text/javascript">
+        function user() {
+
+            reg = /^[A-Za-z]/;
+            var name = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+            
+            if(pass.length>6 && name.match(reg)){
+                alert('Sucessfully')
+            }
+            else{
+                alert('Please enter vaild inputs')
+            }
+        }
+    
+    </script>
+</body>
+</html>

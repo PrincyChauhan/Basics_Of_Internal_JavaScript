@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>PrimeNumber</title>
+    </head>
+    <body>
+        <script>
+            var i,j,count=1,b=0;
+            document.write("First 10 Prime Numbers are:<br>");
+            for(i=2;i>0;i++)
+            {
+                for(j=2;j<=i/2;j++){
+                    if(i%j==0){
+                        b=1;
+                        break;
+                    }
+                }
+                if(b==0)
+                {
+                    document.write(i+"<br>");
+                    count++;
+                }
+                b=0;
+                if(count==10)
+                break;
+            }
+        </script>
+    </body>
+</html>

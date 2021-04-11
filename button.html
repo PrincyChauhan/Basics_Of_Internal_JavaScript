@@ -1,0 +1,31 @@
+<!--Write using JavaScript: how to know which mouse button was clicked, number of elements in form,
+ and write hello world. -->
+<html>
+<head>
+<title>Title of the Page</title>
+<script type="text/javascript">
+document.write("hello world");
+function message(element)
+{
+alert("You clicked the " + element + " element!");
+}
+function myFunction() {
+alert("hello");
+    var x = document.frm.length;
+  alert(x);
+}
+
+</script>
+</head>
+<body>
+<form name="frm">
+<input type="radio" name="Radio" onClick="message('Radio Button 1')">Option 1<br>
+<input type="radio" name="Radio" onClick="message('Radio Button 2')">Option 2<br>
+<input type="checkbox" onClick="message('Check Button')">Check Button<br>
+<input type="submit" value="Send" onClick="message('Send Button')">
+<input type="reset" value="Reset" onClick="message('Reset Button')">
+<input type="button" value="Mine" onClick="message('My very own Button')">
+<input type="submit" value="no of ele" onclick="myFunction()" />
+</form>
+</body>
+</html>

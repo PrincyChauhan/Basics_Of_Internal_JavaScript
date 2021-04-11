@@ -1,0 +1,26 @@
+<!-- which accepts N as input and print first N odd numbers. -->
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <form>
+      <input type="text" name="num" id="num" />
+      <input type="button" value="Calculate" name="btn " onclick="odd()" />
+    </form>
+    <script type="text/javascript">
+      function odd() {
+        var temp = document.getElementById("num").value;
+
+        a = [];
+        for (var i = 1; i <= temp; i++) {
+          if (!(i % 2 == 0)) {
+            a.push(i);
+          }
+        }
+        for (var j = 0; j < a.length; j++) {
+          document.write("<br>" + a[j]);
+        }
+      }
+    </script>
+  </body>
+</html>

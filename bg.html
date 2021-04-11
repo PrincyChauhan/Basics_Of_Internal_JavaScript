@@ -1,0 +1,20 @@
+<!-- Show the use of JavaScript events for the following 
+(i) Trap the exiting of the user from a page. 
+(ii) Show the heading. When the mouse is over the heading the 
+background color should be red and when the mouse goes out of the 
+heading, color should change to blue. -->
+<html>
+    <body window onunload="Exitpage()">
+        <script type="text/javascript">
+          function Exitpage()
+          {
+              alert("Bye");
+          }
+        </script>
+
+    <h1 onmouseover="this.style.color='red'"
+     onmouseout="this.style.color='blue'">
+    This is heading
+    </h1>
+    </body>
+</html>

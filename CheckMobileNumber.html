@@ -1,0 +1,25 @@
+<!-- Write a Javascript to check mobile number (mobile no. should start with 9
+or 8) -->
+
+<html>
+  <head> </head>
+  <body>
+    <input type="text" id="num" name="num" placeholder="Mobile Number" /><br />
+    <input type="button" value="check" name="btn" onclick="mobile()" />
+
+    <script type="text/javascript">
+      function mobile() {
+
+          number= /^[89]/
+          var mobile = document.getElementById('num').value;
+           
+          if(mobile.match(number)){
+              alert('Sucessfully')
+          }
+          else{
+              alert('Please enter vaild inputs')
+          }
+      }
+    </script>
+  </body>
+</html>
